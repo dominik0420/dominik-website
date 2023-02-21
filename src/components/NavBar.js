@@ -105,9 +105,9 @@ export const NavBar = () => {
 
           <span className="navbar-text">
             <div className="social-media">
-              <a href="Instagram"><img src={navIcon1} /></a>
-              <a href="Twitter"><img src={navIcon2} /></a>
-              <a href="Spotify"><img src={navIcon3} /></a>
+              <a href="https://www.linkedin.com/in/zehong-li-8b1232233/" target='_blank'> <img src={navIcon1} /> </a>
+              <a href="https://open.spotify.com/artist/27uVi1PolQhVEkjVrqSX0X" target='_blank'> <img src={navIcon2} /> </a>
+              <a href="https://instagram.com/itsnotdominikkk?igshid=YmMyMTA2M2Y" target='_blank'> <img src={navIcon3} /> </a>
             </div>
             <button className="connect" onClick={() => console.log('connect')}>
             <span>Talk to Me?</span>

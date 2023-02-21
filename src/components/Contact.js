@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import contactImg from '../assets/img/contact-img.svg';
+import contactImg from '../assets/img/contact-img.gif';
 
 export const Contact = () => {
   const formInitialDetails ={
@@ -66,7 +66,7 @@ export const Contact = () => {
                 <Col sm={6} className="px-1">
                   <input type="tel" value={formDetails.phone} placeholder="Phone Number" onChange={(e) => onFormUpdate('phone', e.target.value )} />
                 </Col>
-                <Col>
+                <Col sm={12} className="px-1">
                   <textarea row="6" value={formDetails.message} placeholder="Stuff you wanna say to me :)" onChange={(e) => onFormUpdate('message', e.target.value )} />
                   <button type="submit"> <span> {buttonText} </span> </button>
                 </Col>

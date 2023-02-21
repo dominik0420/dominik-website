@@ -16,7 +16,9 @@ class App extends Component {
         <Banner />
         <Skills />
         <Projects />
+        {/* external pdf? or a cv page */}
         <Contact />
+        <hr class="solid"></hr>
         <Footer />
       </div>
     );
