@@ -2,7 +2,7 @@ import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 import onilogo from '../assets/img/oniroz.png';
 import navIcon1 from '../assets/img/nav-icon1.svg';
-import navIcon2 from '../assets/img/nav-icon1.svg';
+import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
 
 export const NavBar = () => {
@@ -37,7 +37,7 @@ export const NavBar = () => {
       <Container>
         {/* image or when not loaded, text 'logo-unloaded' */}
         <Navbar.Brand href="#home">
-          <img src={onilogo} alt="Logo-Unloaded" />
+          <img className="logo" src={onilogo} alt="Logo-Unloaded" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <span className="navbar-toggler-icon"></span>
@@ -86,6 +86,7 @@ export const NavBar = () => {
             </Nav.Link>
 
             {/* unused for now */}
+            {/*
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -97,7 +98,10 @@ export const NavBar = () => {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown>
+              */}
           </Nav>
+          
+          
 
           <span className="navbar-text">
             <div className="social-media">

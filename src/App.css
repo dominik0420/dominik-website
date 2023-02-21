@@ -82,29 +82,41 @@ p.danger {
 }
 /************ Navbar Css ************/
 
+.logo {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  height: 70px;
+  width: 70px;
+  filter: drop-shadow(5px 5px 5px #222);
+}
+
 nav.navbar {
   padding: 18px 0;
   position: fixed;
   width: 100%;
+  background-color: #000000;
+  opacity: 0.85;
   top: 0;
   z-index: 9999;
-  transition:  0.32s ease-in-out;
+  transition:  1s ease-in-out;
 }
 nav.navbar.scrolled {
   padding: 0px 0;
-  background-color: #121212;
+  height: 100px;
+  background: #272727;
 }
 nav.navbar a.navbar-brand {
     width: 9%;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
-  color: #fff !important;
+  padding-top: 50px;
+  color: #ffffff !important;
   letter-spacing: 0.8px;
   padding: 0 25px;
   font-size: 18px;
-  opacity: 0.25;
-  transition: opacity 0.5s ease-in; 
+  opacity: 0.65;
+  transition: opacity 0.3s ease-in; 
 }
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
@@ -144,7 +156,7 @@ span.navbar-text {
     transform: scale(1);
 }
 .social-media a img {
-	width: 40%;
+	width: 60%;
 	z-index: 1;
 	transition: 0.5s ease-in-out;
 }
@@ -232,23 +244,31 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 
+
 .banner {
   margin-top: 0;
   padding: 260px 0 100px 0;
-  background-image: url('./assets/img/banner-bg.png');
+  position: relative;
+  height: 100vh;
+  background-image: linear-gradient(rgb(177, 175, 175), rgb(0, 0, 0)), url('./assets/img/banner-bg.jpg');
+  backdrop-filter: sepia(90%);
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-blend-mode: hard-light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .banner .tagline {
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 10px;
-  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  font-size: 20px;
+  font-size: 30px;
   margin-bottom: 16px;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .banner h1 {
   font-size: 65px;
@@ -259,7 +279,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: block;
 }
 .banner p {
-  color: #B8B8B8;
+  color: #f3f3f3;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
@@ -333,6 +353,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .skill-slider .item img {
   width: 50%;
   margin: 0 auto 15px auto;
+  transition: opacity 0.3s ease-in-out;
+}
+.skill-slider .item img:hover {
+  opacity: .65;
+}
+.skill-slider .item a{
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+.skill-slider .item a:hover{
+  text-decoration: none;
+  color: rgb(140, 112, 173);
 }
 .background-image-left {
   top: 28%;

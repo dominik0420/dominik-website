@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../assets/img/header-img.svg";
+import 'animate.css';
+import TrackVisibility from "react-on-screen";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -51,26 +53,28 @@ export const Banner = () => {
     }
   }
 
+
   return (
     <section className="banner" id="home">
+      
       <Container>
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
-            <span className="tagline"> Hi, I'm Zehong Li</span>
-            <h1>{'also probably known as '} 
-              <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'>
-              </span>
-              <span className="wrap">
-                {text}
-              </span>
-            </h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <button onClick={() => console.log('Contact')}>
-                Get in touch with me?
-                <ArrowRightCircle size={25}></ArrowRightCircle>
-              </button>
+            <TrackVisibility>
+            {({ isVisible }) => 
+              <div className= {isVisible ? "animated__animated animated__fadeIn" : ""}>
+                <span className="tagline"> Yo it's Zehong - </span>
+                <h1>{'also might be known as '} <span className="wrap"> {text} </span> </h1>
+                <p> {'4th Year UCSD Undergrad major in Cognitive Science Spec. in Machine Learning and Neuro Computation.'}  </p>
+                <p> {'Also sometimes a music producer. :)'}  </p>
+                <button onClick={() => console.log('Contact')}>
+                  Get in touch with me?
+                  <ArrowRightCircle size={25}></ArrowRightCircle>
+                </button>
+                
+              </div>
+            }   
+            </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <img src={"headerImg"} alt=''/>

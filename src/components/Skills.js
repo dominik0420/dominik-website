@@ -3,9 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import "react-multi-carousel/lib/styles.css";
 import colorSharp from "../assets/img/color-sharp.png";
 
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
+import album1 from "../assets/img/album1.jpg";
+import single1 from "../assets/img/single1.jpg";
 
 export const Skills = () => {
   const responsive = {
@@ -35,27 +34,19 @@ export const Skills = () => {
           <Col>
             <div className="skill-bx">
               <h2>
-                Skills
+                My Music
               </h2>
               <p>
-                My stuff here!
+                Check out my released music here
               </p>
               <Carousel responsive={responsive} infinite={true} className="skill-slider">
                 <div className = "item">
-                  <img src={"meter1"} alt="Image"/>
-                  <h5> Music Production </h5>
+                  <a href="https://open.spotify.com/album/6WTnsLfjL5WHP4LjsG2l2i" target="_blank"> <img src={album1} alt="Image"/> </a>
+                  <h5> <a href="https://open.spotify.com/album/6WTnsLfjL5WHP4LjsG2l2i"> LOTUS </a> </h5>
                 </div>
                 <div className = "item">
-                  <img src={"meter2"} alt="Image"/>
-                  <h5> Machine Learning </h5>
-                </div>
-                <div className = "item">
-                  <img src={"meter3"} alt="Image"/>
-                  <h5> Software Programming </h5>
-                </div>
-                <div className = "item">
-                  <img src={"meter1"} alt="Image"/>
-                  <h5> Data Analysis </h5>
+                  <a href="https://open.spotify.com/album/0XVFQhA463SojFXEeIrwwk" target="_blank"> <img src={single1} alt="Image"/> </a>
+                  <h5> <a href="https://open.spotify.com/album/0XVFQhA463SojFXEeIrwwk"> GROUND HIDDEN </a> </h5>
                 </div>
               </Carousel>
             </div>
