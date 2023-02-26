@@ -70,6 +70,7 @@ input:focus, textarea:focus, select:focus {
 	main .container {
 		max-width: 100%;
 		padding: 0 150px;
+    margin-top: 20px;
 	}
 }
 
@@ -323,47 +324,57 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 
 
-.skill {
+.music {
   padding: 0 0 50px 0;
   position: relative;
 }
-.skill-bx {
+.music-bx {
   background: #151515;
   border-radius: 64px;
   text-align: center;
   padding: 60px 50px;
   margin-top: -60px;
 }
-.skill h2 {
+.music h2 {
 	font-size: 45px;
 	font-weight: 700;
 }
-.skill p {
+.music p {
     color: #B8B8B8;
     font-size: 18px;
     letter-spacing: 0.8px;
     line-height: 1.5em;
     margin: 14px 0 75px 0;
 }
-.skill-slider {
-  width: 80%;
-  margin: 0 auto;
-  position: relative;
-}
-.skill-slider .item img {
-  width: 50%;
-  margin: 0 auto 15px auto;
-  transition: opacity 0.3s ease-in-out;
-}
-.skill-slider .item img:hover {
-  opacity: .65;
-}
-.skill-slider .item a{
+.music a {
+  font-size: 20px;
   color: inherit;
   text-decoration: none;
   transition: color 0.2s ease-in-out;
 }
-.skill-slider .item a:hover{
+.music a:hover{
+  text-decoration: none;
+  color: rgb(140, 112, 173);
+}
+.music-slider {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+.music-slider .item img {
+  width: 50%;
+  margin: 0 auto 15px auto;
+  transition: opacity 0.3s ease-in-out;
+}
+.music-slider .item img:hover {
+  opacity: .65;
+}
+.music-slider .item a{
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+.music-slider .item a:hover{
   text-decoration: none;
   color: rgb(140, 112, 173);
 }
@@ -424,7 +435,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     position: absolute;
     width: 0;
     height: 100%;
-    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    background: linear-gradient(90.21deg, #3a1937 -5.91%, #201648 111.58%);
     top: 0;
     left: 0;
     z-index: -1;
@@ -434,7 +445,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     width: 100% !important;
 }
 .project .nav.nav-pills .nav-link.active {
-    border: 1px solid rgba(255, 255, 255, 1);
+    border: 5px solid rgba(255, 255, 255, 1);
 }
 .nav-link#projects-tabs-tab-first {
   border: 1px solid rgba(255, 255, 255, 0.5);
@@ -462,6 +473,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 100%;
   height: 0;
   transition: 0.4s ease-in-out;
+  
 }
 .proj-imgbx:hover::before {
   height: 100%;
@@ -501,6 +513,44 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
+.pdf-container {
+  padding: 80px 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pdf-container h2 {
+	font-size: 45px;
+	font-weight: 700;
+  text-align: center;
+}
+.pdf-container p {
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px auto 30px auto;
+  text-align: center;
+  width: 56%;
+}
+.pdf-container iframe {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  height: 500px;
+  border: none;
+}
+.pdf-container a{
+  transition: color 15ms;
+}
+.pdf-container a:hover {
+  cursor: pointer;
+  color: #ffffff;
+  text-decoration: underline;
+}
 
 
 .contact {
@@ -575,7 +625,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Footer Css ************/
 .footer {
-  padding: 50px 0 50px 0;
+  padding: 50px 0 25px 0;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
