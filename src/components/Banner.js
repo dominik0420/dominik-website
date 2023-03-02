@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import headerImg from "../assets/img/header-img.svg";
 import 'animate.css';
 import TrackVisibility from "react-on-screen";
 
@@ -9,21 +8,21 @@ export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
 
   const [isDeleting, setIsDeleting] = useState(false);
+  
+  const [text, setText] = useState('');
+
+  const [delta, setDelta] = useState(300 - Math.random() * 100);
+  
+  const [index, setIndex] = useState(1);
 
   const toRotate = [ "Dominik", "ONIROZ", "Music Producer", "Software Engineer", "Web Dev", "Data Analyst"];
 
-  const [text, setText] = useState('');
-
-  const [index, setIndex] = useState(1);
-
-  const [delta, setDelta] = useState(300 - Math.random() * 100);
-
-  const period = 2000;
+  const period = 5;
 
   useEffect(() => {
     let ticker = setInterval(() => {
       tick();
-    }, delta)
+    }, delta);
 
     return () => { clearInterval(ticker) };
   }, [text])
@@ -47,7 +46,7 @@ export const Banner = () => {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
       setIndex(1);
-      setDelta(500);
+      setDelta(200);
     } else {
       setIndex(prevIndex => prevIndex + 1);
     }
@@ -64,13 +63,17 @@ export const Banner = () => {
             {({ isVisible }) => 
               <div className= {isVisible ? "animated__animated animated__fadeIn" : ""}>
                 <span className="tagline"> Yo it's Zehong - </span>
-                <h1>{'also might be known as '} <span className="wrap"> {text} </span> </h1>
+                <h1>{`also might be known as`} 
+                  <span className="txt-rotate" dataPeriod="5" data-rotate='[ "Dominik", "ONIROZ", "Music Producer", "Software Engineer", "Web Dev", "Data Analyst" ]'>
+                    <span className="wrap">{text}</span>
+                  </span>
+                </h1>
                 <p> {'4th Year UCSD Undergrad major in Cognitive Science Spec. in Machine Learning and Neuro Computation.'}  </p>
                 <p> {'Also sometimes a music producer. :)'}  </p>
-                <button onClick={() => console.log('Contact')}>
+                <a href="#connect">
                   Get in touch with me?
                   <ArrowRightCircle size={25}></ArrowRightCircle>
-                </button>
+                </a>
                 
               </div>
             }   

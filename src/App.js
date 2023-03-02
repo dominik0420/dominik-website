@@ -17,7 +17,6 @@ function App() {
         <NavBar />
         {/* TL;DR section of a card made with VISME */}
         <Routes>
-          <Route path="/cv" element={<PdfViewer />} />
           <Route path="/" element={
             <>
               <Banner />
@@ -25,9 +24,9 @@ function App() {
               <hr class="solid"></hr>
               <Projects />
               <hr class="solid"></hr>
-              <Contact />
-              <hr class="solid"></hr>
               <PdfViewer />
+              <hr class="solid"></hr>
+              <Contact />
               <hr class="solid"></hr>
               <Footer />
             </>

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import contactImg from '../assets/img/contact-img.gif';
+import contactIcon from '../assets/img/contact-icon.png';
+import navIcon5 from '../assets/img/nav-icon5.png';
 
 export const Contact = () => {
   const formInitialDetails ={
@@ -48,10 +50,23 @@ export const Contact = () => {
       <Container>
         <Row className="align-items-center">
           <Col md={6}>
-            <img src={contactImg} alt="Contact Me"/>
+            <img className="contactImg" src={contactImg} alt="Contact Me"/>
           </Col>
           <Col md={6}>
-            <h2>Get In Touch</h2>
+            <h2>Get In Touch? </h2>
+            <h4>If you're this far that means you have at least some interest in what I did or what I am doing. Why not reach out? </h4>
+            <Row> 
+              <Col style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '50px' }}>
+                <a href="mailto:dominiclesnar233@gmail.com" style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: '5px' }}>
+                  <img className="contactIcon" src={contactIcon} />
+                  <p className="email"style={{ textDecoration: 'none'}}>dominiclesnar233@gmail.com</p>
+                </a>
+                <a href="https://twitter.com/onirozsound" style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: '5px' }}>
+                  <img className="contactIcon" src={navIcon5} />
+                  <p className="email"style={{ textDecoration: 'none'}}> @ONIROZ_SOUND </p>
+                </a>
+              </Col>
+            </Row>
             <form onSubmit={handleSubmit}>
               <Row>
                 <Col sm={6} className="px-1">

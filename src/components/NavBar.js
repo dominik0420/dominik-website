@@ -1,9 +1,11 @@
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 import onilogo from '../assets/img/oniroz.png';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
+import navIcon4 from '../assets/img/nav-icon4.png';
+import navIcon5 from '../assets/img/nav-icon5.png';
 
 export const NavBar = () => {
 
@@ -46,59 +48,44 @@ export const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link
-              href="#Me"
-              className={activateLink === 'Me' ? 'active navbar-link' : 'navbar-link'}
-              onClick={() => onUpdateActiveLink('Me')}
+              href="#home"
+              className={activateLink === 'home' ? 'active navbar-link' : 'navbar-link'}
+              onClick={() => onUpdateActiveLink('home')}
             >
               Me
             </Nav.Link>
 
             <Nav.Link
-              href="#MyMusic"
-              className={activateLink === 'MyMusic' ? 'active navbar-link' : 'navbar-link'}
-              onClick={() => onUpdateActiveLink('MyMusic')}
+              href="#musics"
+              className={activateLink === 'musics' ? 'active navbar-link' : 'navbar-link'}
+              onClick={() => onUpdateActiveLink('musics')}
             >
               My Music
             </Nav.Link>
 
             <Nav.Link
-              href="#MyProjects"
-              className={activateLink === 'MyProjects' ? 'active navbar-link' : 'navbar-link'}
-              onClick={() => onUpdateActiveLink('MyProjects')}
+              href="#project"
+              className={activateLink === 'project' ? 'active navbar-link' : 'navbar-link'}
+              onClick={() => onUpdateActiveLink('project')}
             >
               My Projects
             </Nav.Link>
 
             <Nav.Link
-              href="#MyCV"
-              className={activateLink === 'MyCV' ? 'active navbar-link' : 'navbar-link'}
-              onClick={() => onUpdateActiveLink('MyCV')}
+              href="#pdfviewer"
+              className={activateLink === 'pdfviewer' ? 'active navbar-link' : 'navbar-link'}
+              onClick={() => onUpdateActiveLink('pdfviewer')}
             >
               My CV
             </Nav.Link>
 
             <Nav.Link
-              href="#MyContact"
-              className={activateLink === 'MyContact' ? 'active navbar-link' : 'navbar-link'}
-              onClick={() => onUpdateActiveLink('MyContact')}
+              href="#connect"
+              className={activateLink === 'connect' ? 'active navbar-link' : 'navbar-link'}
+              onClick={() => onUpdateActiveLink('connect')}
             >
               My Contact
             </Nav.Link>
-
-            {/* unused for now */}
-            {/*
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-              */}
           </Nav>
           
           
@@ -108,10 +95,9 @@ export const NavBar = () => {
               <a href="https://www.linkedin.com/in/zehong-li-8b1232233/" target='_blank'> <img src={navIcon1} /> </a>
               <a href="https://open.spotify.com/artist/27uVi1PolQhVEkjVrqSX0X" target='_blank'> <img src={navIcon2} /> </a>
               <a href="https://instagram.com/itsnotdominikkk?igshid=YmMyMTA2M2Y" target='_blank'> <img src={navIcon3} /> </a>
+              <a href="https://github.com/dominik0420" target='_blank'> <img src={navIcon4} /> </a>
+              <a href="https://twitter.com/onirozsound" target='_blank'> <img src={navIcon5} /> </a>
             </div>
-            <button className="connect" onClick={() => console.log('connect')}>
-            <span>Talk to Me?</span>
-            </button>
           </span>
 
 

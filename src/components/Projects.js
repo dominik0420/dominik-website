@@ -4,11 +4,12 @@ import colorSharp2 from "../assets/img/color-sharp2.png";
 import projImg1 from "../assets/img/project-img1.jpg";
 import projImg2 from "../assets/img/project-img2.jpg";
 import projImg3 from "../assets/img/project-img3.png";
-
+import sProjImg1 from "../assets/img/softwareProject-img1.png"
+import oProjImg1 from "../assets/img/oProj-img1.jpg"
 
 export const Projects = () => {
 
-  const projects = [
+  const dataProjects = [
     {
       title: "Human Touch Project",
       description: "Ongoing at Salk Institute, advised by Sergei Gepshtein and Eric Mooshagian",
@@ -18,11 +19,30 @@ export const Projects = () => {
       title: "Dota2 Pro Circuit Data Analysis",
       description: "Ongoing seasonal data analysis for Dota2 Pro Circuit Tournament",
       imgUrl: projImg2,
+      url: 'https://github.com/dominik0420/dota2_dpc_data_analysis'
     },
     {
       title: "COGS108 Final Project",
       description: "explore if there is a relationship between cases and crypto prices and find a correlation / explore stock market data using NASDAQ databases and see if there was any correlation between COVID-19 cases and stock market prices",
       imgUrl: projImg3,
+      url: 'https://github.com/dominik0420/COGS108_FinalProject'
+    }
+  ];
+
+  const softwareProjects = [
+    {
+      title: "Personal Portfolio Website",
+      description: "It's this website! :)",
+      imgUrl: sProjImg1,
+    }
+  ];
+
+  const otherProjects = [
+    {
+      title: "Oops! ",
+      description: "Nothing here yet, apparently. Zehong / Dominik / ONIROZ Li will come back with more stuff in a bit :)",
+      imgUrl: oProjImg1,
+      url: 'https://google.com'
     }
   ];
   
@@ -32,7 +52,7 @@ export const Projects = () => {
         <Row>
           <Col>
             <h2> Projects </h2>
-            <p> Click tabs to check out the projects I made: </p>
+            <p> Click tabs and hover to check out the projects I made: </p>
             <Tab.Container id="projects-tabs" defaultActivekey="first">
               <Nav variants="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                 <Nav.Item>
@@ -49,7 +69,7 @@ export const Projects = () => {
                 <Tab.Pane eventKey="first">
                   <Row>
                     {
-                      projects.map((project, index) => {
+                      softwareProjects.map((project, index) => {
                         return (
                           <ProjectCard 
                             key = {index} 
@@ -62,7 +82,7 @@ export const Projects = () => {
                 <Tab.Pane eventKey="second">
                   <Row>
                     {
-                      projects.map((project, index) => {
+                      dataProjects.map((project, index) => {
                         return (
                           <ProjectCard 
                             key = {index} 
@@ -75,7 +95,7 @@ export const Projects = () => {
                 <Tab.Pane eventKey="third">
                   <Row>
                     {
-                      projects.map((project, index) => {
+                      otherProjects.map((project, index) => {
                         return (
                           <ProjectCard 
                             key = {index} 
