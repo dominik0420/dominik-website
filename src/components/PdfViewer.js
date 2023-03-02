@@ -14,7 +14,7 @@ export const PdfViewer = () => {
           <Col>
             <h2> Résumé / CV </h2>
             <p> uhhhh just in case you might wanna check. <a> Click here if you hate Google Drive for some reason. </a> </p>
-            <iframe src="https://drive.google.com/file/d/1F0ANSvyEXe31IAm9opCPOV7VWKBfgacp/preview" width="640" height="480" ></iframe>
+            <iframe src="https://drive.google.com/file/d/1zlOJuziQraHNhs4R_LbkiLAW-9EMiyz9/preview" width="640" height="480" ></iframe>
           </Col>
         </Row>
       </Container>
