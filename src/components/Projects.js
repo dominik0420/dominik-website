@@ -34,6 +34,7 @@ export const Projects = () => {
       title: "Personal Portfolio Website",
       description: "It's this website! :)",
       imgUrl: sProjImg1,
+      url: 'https://github.com/dominik0420/dominik-website'
     }
   ];
 
